@@ -1,7 +1,7 @@
 # Getting Started with this amazing project
 
 ### `Prerequisites`
-    [yarn](https://yarnpkg.com/) or [npm](https://www.npmjs.com/) preinstalled in your computer
+[yarn](https://yarnpkg.com/) or [npm](https://www.npmjs.com/) preinstalled in your computer
 
 ## Available Scripts
 
