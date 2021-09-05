@@ -2,7 +2,7 @@
 
 ## Prerequisites
 
-    [https://yarnpkg.com/]yarn) or [https://www.npmjs.com/](npm) preinstalled in your computer
+    [yarn](https://yarnpkg.com/) or [npm](https://www.npmjs.com/) preinstalled in your computer
 
 ## Available Scripts
 
