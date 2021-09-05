@@ -2,20 +2,21 @@ export default function BookingStatus(props) {
   if (props.IsBookable) {
     return (
       <>
-        <div style={{ backgroundColor: "green" }}>Book</div>
+        <div className="HouseCard-cardLabel HouseCard-cardLabel__avaliable">avaliable</div>
       </>
     );
   } else if (props.DaysBooked === 0) {
     return (
       <>
-        <div style={{ backgroundColor: "red" }}>Not Bookable</div>
+        <div className="HouseCard-cardLabel HouseCard-cardLabel__unavaliable">unavaliable</div>
       </>
     );
   } else {
     return (
       <>
-        <div style={{ backgroundColor: "#2C64B7" }}>booked</div>
+        <div className="HouseCard-cardLabel HouseCard-cardLabel__booked">booked</div>
       </>
+      
     );
   }
 }

@@ -2,8 +2,7 @@ import { useEffect, useState } from "react";
 import GetCards from "./service/RestService";
 import BookingButton from "./components/BookingButton";
 import BookingStatus from "./components/BookingStatus"
-import "./App.css";
-
+import "./App.scss";
 export default function RenderCards() {
   let [cards, setCards] = useState([]);
    const RetriveCards = async () => {
@@ -11,19 +10,23 @@ export default function RenderCards() {
     setCards(  RetrivedCards );
   };
   useEffect(() => RetriveCards(), []);
-
+  const CardStyle = "HouseCard"
+  const AvaliableCardStyle = "HouseCard HouseCard-hover"
   return (
     <div className="CardList">
         {cards.length ?  cards.map(card => (  
-          <div className="HouseCard" key={card.id}>
+          <div className={card.bookable ? AvaliableCardStyle : CardStyle} key={card.id} >
               <BookingStatus IsBookable={card.bookable} DaysBooked={card.booked}/>
-            <img src={card.image} width="300px" alt="sum good mountains">
+            <img src={card.image } className="HouseCard-image" alt="sum good mountains">
             </img>
-            <p>{card.id}</p>
+            <div className="HouseCard-info">
+            <p>Id: {card.id}</p>
             <h3>{card.name}</h3>
+            </div>
             <BookingButton IsBookable={card.bookable} DaysBooked={card.booked} />
           </div>
-          )) : <div>oh no</div>}
+          )) :<lottie-player src="https://assets9.lottiefiles.com/packages/lf20_nzftwbhc.json"  background="transparent"  speed="1"  style={{width: '300px' , height: '300px'}}  loop  autoplay></lottie-player>}
     </div>
   );
 }
+
