@@ -17,7 +17,7 @@ export default function RenderCards() {
         {cards.length ?  cards.map(card => (  
           <div className={card.bookable ? AvaliableCardStyle : CardStyle} key={card.id} >
               <BookingStatus IsBookable={card.bookable} DaysBooked={card.booked}/>
-            <img src={card.image } className="HouseCard-image" alt="sum good mountains">
+            <img src={card.image } className="HouseCard-image" alt={card.name}>
             </img>
             <div className="HouseCard-info">
             <p>Id: {card.id}</p>
